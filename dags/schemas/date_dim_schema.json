@@ -1,0 +1,31 @@
+{
+  "schemaName": "date_dim",
+  "dimensionFieldSpecs": [
+    {
+      "name": "date_id",
+      "dataType": "INT",
+      "defaultNullValue": 0
+    },
+    {
+      "name": "month",
+      "dataType": "INT",
+      "defaultNullValue": 0
+    },
+    {
+      "name": "day",
+      "dataType": "INT",
+      "defaultNullValue": 0
+    },
+    {
+      "name": "year",
+      "dataType": "INT",
+      "defaultNullValue": 0
+    },
+    {
+      "name": "quarter",
+      "dataType": "INT",
+      "defaultNullValue": 0
+    }
+  ],
+  "primaryKeyColumns": ["date_id"]
+}
