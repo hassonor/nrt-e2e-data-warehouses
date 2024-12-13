@@ -2,11 +2,6 @@
   "schemaName": "date_dim",
   "dimensionFieldSpecs": [
     {
-      "name": "date_id",
-      "dataType": "INT",
-      "defaultNullValue": 0
-    },
-    {
       "name": "month",
       "dataType": "INT",
       "defaultNullValue": 0
@@ -27,5 +22,15 @@
       "defaultNullValue": 0
     }
   ],
-  "primaryKeyColumns": ["date_id"]
+  "dateTimeFieldSpecs": [
+    {
+      "name": "date_id",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ],
+  "primaryKeyColumns": [
+    "date_id"
+  ]
 }

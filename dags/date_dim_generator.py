@@ -21,19 +21,19 @@ output_file = '/opt/airflow/csvs/date_dim_large_data.csv'
 
 def generate_date_attributes(date):
     """
-    Generate date attributes according to the specified schema.
+    Generate date attributes for the date dimension:
 
-    Schema fields:
-    - date_id (INT)
+    Fields:
+    - date_id (BIGINT TIMESTAMP in milliseconds)
     - month (INT)
     - day (INT)
     - year (INT)
     - quarter (INT)
     """
-    # Convert date to YYYYMMDD format as integer for date_id
-    date_id = int(date.strftime('%Y%m%d'))
+    # Convert datetime to Unix timestamp in milliseconds
+    date_id = int(date.timestamp() * 1000)
 
-    # Basic date attributes as integers
+    # Extract date components
     year = date.year
     month = date.month
     day = date.day
@@ -66,12 +66,12 @@ def generate_date_dim_data():
             dates_data.append(date_attributes)
             current_date += timedelta(days=1)
 
-        # Create DataFrame with schema-specified columns only
+        # Create DataFrame
         df = pd.DataFrame(dates_data)
 
-        # Ensure all columns are integer type as per schema
+        # Set proper dtypes
         df = df.astype({
-            'date_id': 'int32',
+            'date_id': 'int64',  # Use int64 for large timestamp values
             'month': 'int32',
             'day': 'int32',
             'year': 'int32',

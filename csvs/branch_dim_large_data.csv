@@ -1,51 +1,51 @@
 branch_id,branch_name,branch_address,city,region,postcode,opening_date
-B00001,Branch 1,382 King St,London,Scotland,M1 1AE,1526486852324
-B00002,Branch 2,14 Church Rd,Glasgow,Scotland,G1 1AA,1548000452324
-B00003,Branch 3,411 Church Rd,London,Scotland,EH1 1AA,1440173252324
-B00004,Branch 4,972 High St,Edinburgh,London,EH1 1AA,1614269252324
-B00005,Branch 5,79 Church Rd,London,Scotland,B1 1AA,1520266052324
-B00006,Branch 6,902 Church Rd,Manchester,Greater Manchester,B1 1AA,1601827652324
-B00007,Branch 7,305 Queen St,London,London,M1 1AE,1651853252324
-B00008,Branch 8,35 King St,Glasgow,Greater Manchester,B1 1AA,1546358852324
-B00009,Branch 9,87 High St,Manchester,Greater Manchester,B1 1AA,1625760452324
-B00010,Branch 10,778 Market St,Birmingham,West Midlands,M1 1AE,1464106052324
-B00011,Branch 11,51 High St,Birmingham,Scotland,EC1A 1BB,1670342852324
-B00012,Branch 12,410 High St,Birmingham,West Midlands,EH1 1AA,1428941252324
-B00013,Branch 13,35 Queen St,Birmingham,Scotland,M1 1AE,1585325252324
-B00014,Branch 14,173 King St,Manchester,Scotland,B1 1AA,1555776452324
-B00015,Branch 15,941 King St,Edinburgh,Scotland,G1 1AA,1648310852324
-B00016,Branch 16,543 Queen St,Glasgow,West Midlands,G1 1AA,1670083652324
-B00017,Branch 17,890 Church Rd,London,Scotland,G1 1AA,1465661252324
-B00018,Branch 18,301 King St,Birmingham,Scotland,EC1A 1BB,1477152452324
-B00019,Branch 19,939 Church Rd,Glasgow,West Midlands,EH1 1AA,1705334852324
-B00020,Branch 20,457 Queen St,Manchester,London,EC1A 1BB,1423238852324
-B00021,Branch 21,488 King St,Manchester,Scotland,G1 1AA,1708531652324
-B00022,Branch 22,189 Market St,London,London,M1 1AE,1587658052324
-B00023,Branch 23,250 Queen St,London,London,EC1A 1BB,1579190852324
-B00024,Branch 24,358 High St,Manchester,West Midlands,M1 1AE,1729267652324
-B00025,Branch 25,98 King St,Edinburgh,Scotland,B1 1AA,1611072452324
-B00026,Branch 26,168 King St,Manchester,West Midlands,G1 1AA,1534176452324
-B00027,Branch 27,593 Market St,Birmingham,London,B1 1AA,1638806852324
-B00028,Branch 28,542 Church Rd,London,West Midlands,EH1 1AA,1627488452324
-B00029,Branch 29,545 Market St,Glasgow,London,EH1 1AA,1675094852324
-B00030,Branch 30,940 Queen St,Glasgow,Scotland,EH1 1AA,1491581252324
-B00031,Branch 31,371 Queen St,Glasgow,West Midlands,M1 1AE,1607530052324
-B00032,Branch 32,976 Market St,Edinburgh,West Midlands,B1 1AA,1528301252324
-B00033,Branch 33,112 Market St,Birmingham,West Midlands,EH1 1AA,1510243652324
-B00034,Branch 34,684 King St,Edinburgh,West Midlands,G1 1AA,1483373252324
-B00035,Branch 35,122 High St,Edinburgh,Greater Manchester,EC1A 1BB,1655395652324
-B00036,Branch 36,248 Queen St,London,Scotland,M1 1AE,1521648452324
-B00037,Branch 37,861 High St,Manchester,Scotland,B1 1AA,1676390852324
-B00038,Branch 38,423 Market St,Manchester,Scotland,B1 1AA,1418746052324
-B00039,Branch 39,502 Queen St,Birmingham,Greater Manchester,EH1 1AA,1599926852324
-B00040,Branch 40,621 Church Rd,Glasgow,West Midlands,B1 1AA,1569859652324
-B00041,Branch 41,137 King St,Edinburgh,Scotland,B1 1AA,1578326852324
-B00042,Branch 42,249 High St,Manchester,Scotland,G1 1AA,1592323652324
-B00043,Branch 43,647 Market St,London,Greater Manchester,M1 1AE,1649347652324
-B00044,Branch 44,154 Market St,Manchester,Scotland,B1 1AA,1504714052324
-B00045,Branch 45,647 High St,Birmingham,Greater Manchester,EC1A 1BB,1599235652324
-B00046,Branch 46,838 King St,Manchester,West Midlands,M1 1AE,1551715652324
-B00047,Branch 47,390 King St,Manchester,Scotland,B1 1AA,1553789252324
-B00048,Branch 48,390 Queen St,Manchester,London,EC1A 1BB,1603728452324
-B00049,Branch 49,789 Church Rd,Glasgow,Scotland,EH1 1AA,1629475652324
-B00050,Branch 50,758 High St,Birmingham,Scotland,EH1 1AA,1629302852324
+B00001,Branch 1,826 Queen St,Birmingham,Greater Manchester,B1 1AA,1612713783506
+B00002,Branch 2,936 Queen St,Birmingham,Scotland,EH1 1AA,1679932983506
+B00003,Branch 3,409 Church Rd,Edinburgh,London,B1 1AA,1500566583506
+B00004,Branch 4,527 High St,London,Scotland,B1 1AA,1550246583506
+B00005,Branch 5,196 Church Rd,Birmingham,Scotland,EH1 1AA,1434384183506
+B00006,Branch 6,629 High St,Birmingham,Greater Manchester,G1 1AA,1652803383506
+B00007,Branch 7,859 King St,London,West Midlands,EH1 1AA,1702310583506
+B00008,Branch 8,979 High St,Glasgow,Greater Manchester,EC1A 1BB,1502121783506
+B00009,Branch 9,894 Queen St,London,Scotland,G1 1AA,1599148983506
+B00010,Branch 10,810 Queen St,Edinburgh,Scotland,EH1 1AA,1506528183506
+B00011,Branch 11,77 High St,Manchester,London,EC1A 1BB,1445788983506
+B00012,Branch 12,459 Church Rd,London,Scotland,B1 1AA,1600876983506
+B00013,Branch 13,447 Queen St,Edinburgh,West Midlands,M1 1AE,1732896183506
+B00014,Branch 14,862 Queen St,London,London,G1 1AA,1466092983506
+B00015,Branch 15,173 Church Rd,Manchester,London,EH1 1AA,1593619383506
+B00016,Branch 16,558 Church Rd,Edinburgh,West Midlands,B1 1AA,1640793783506
+B00017,Branch 17,685 King St,Manchester,Scotland,EC1A 1BB,1635609783506
+B00018,Branch 18,22 Market St,Edinburgh,West Midlands,M1 1AE,1717948983506
+B00019,Branch 19,373 Church Rd,London,Greater Manchester,M1 1AE,1720108983506
+B00020,Branch 20,162 High St,Birmingham,Greater Manchester,B1 1AA,1613404983506
+B00021,Branch 21,770 Church Rd,Birmingham,London,M1 1AE,1455292983506
+B00022,Branch 22,117 King St,Glasgow,London,M1 1AE,1419091383506
+B00023,Branch 23,483 Market St,Manchester,West Midlands,EH1 1AA,1480694583506
+B00024,Branch 24,827 Church Rd,Birmingham,West Midlands,EH1 1AA,1678723383506
+B00025,Branch 25,433 High St,Manchester,Greater Manchester,G1 1AA,1662652983506
+B00026,Branch 26,919 Church Rd,Manchester,Scotland,B1 1AA,1543766583506
+B00027,Branch 27,65 Church Rd,Birmingham,London,M1 1AE,1696780983506
+B00028,Branch 28,286 Queen St,Edinburgh,Scotland,M1 1AE,1535644983506
+B00029,Branch 29,643 King St,Glasgow,Scotland,EC1A 1BB,1541174583506
+B00030,Branch 30,400 King St,Manchester,Scotland,G1 1AA,1688572983506
+B00031,Branch 31,667 Queen St,Manchester,Greater Manchester,EC1A 1BB,1727020983506
+B00032,Branch 32,918 Church Rd,Birmingham,Scotland,G1 1AA,1702915383506
+B00033,Branch 33,768 High St,Manchester,Greater Manchester,M1 1AE,1590681783506
+B00034,Branch 34,652 High St,London,West Midlands,EH1 1AA,1519315383506
+B00035,Branch 35,688 Queen St,Edinburgh,Scotland,EH1 1AA,1657728183506
+B00036,Branch 36,451 High St,Birmingham,Scotland,B1 1AA,1675958583506
+B00037,Branch 37,285 High St,Glasgow,Scotland,EC1A 1BB,1516291383506
+B00038,Branch 38,591 High St,Birmingham,Scotland,G1 1AA,1623859383506
+B00039,Branch 39,195 King St,Birmingham,Scotland,G1 1AA,1447948983506
+B00040,Branch 40,403 Queen St,London,Scotland,EH1 1AA,1576166583506
+B00041,Branch 41,796 High St,Edinburgh,Greater Manchester,M1 1AE,1470931383506
+B00042,Branch 42,693 King St,Edinburgh,West Midlands,B1 1AA,1660924983506
+B00043,Branch 43,188 King St,Edinburgh,Greater Manchester,EC1A 1BB,1460736183506
+B00044,Branch 44,852 King St,Birmingham,Scotland,B1 1AA,1559318583506
+B00045,Branch 45,626 King St,Edinburgh,London,G1 1AA,1593273783506
+B00046,Branch 46,732 Queen St,Glasgow,Greater Manchester,B1 1AA,1480176183506
+B00047,Branch 47,863 High St,Manchester,Scotland,EC1A 1BB,1729267383506
+B00048,Branch 48,498 Queen St,Glasgow,London,M1 1AE,1503763383506
+B00049,Branch 49,810 Queen St,Manchester,Scotland,EH1 1AA,1448899383506
+B00050,Branch 50,5 High St,Edinburgh,Scotland,B1 1AA,1539878583506

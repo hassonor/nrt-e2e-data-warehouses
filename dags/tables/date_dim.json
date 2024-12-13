@@ -11,8 +11,14 @@
   },
   "tableIndexConfig": {
     "loadMode": "MMAP",
-    "invertedIndexColumns": ["month", "quarter", "year"],
-    "sortedColumn": ["date_id"]
+    "invertedIndexColumns": [
+      "month",
+      "quarter",
+      "year"
+    ],
+    "sortedColumn": [
+      "date_id"
+    ]
   },
   "ingestionConfig": {
     "batchIngestionConfig": {
