@@ -10,12 +10,11 @@ from airflow.operators.python import PythonOperator
 start_date = datetime(2024, 12, 12)
 default_args = {
     'owner': 'orhasson',
-    'depends_on_past': False,
-    'backfill': False
+    'depends_on_past': False
 }
 
 # Parameters
-num_rows = 50
+num_rows = 1000
 output_file = '/opt/airflow/csvs/account_dim_large_data.csv'
 
 
@@ -94,6 +93,7 @@ with DAG('account_dim_generator',
          description='Generate large account dimension data in a CSV file',
          schedule_interval=timedelta(days=1),
          start_date=start_date,
+         catchup=False,
          tags=['dimension']) as dag:
     # Task 1: Start
     start = EmptyOperator(

@@ -1,0 +1,18 @@
+{
+  "inputDirURI": "file:///opt/airflow/csvs/",
+  "includeFileNamePattern": "customer_dim_large_data.csv",
+  "outputDirURI": "file:///opt/airflow/pinot_segments",
+  "overwriteOutput": "true",
+  "pinotFSSpec": {
+    "className": "org.apache.pinot.plugin.filesystem.LocalPinotFS"
+  },
+  "tableName": "branch_dim_OFFLINE",
+  "segmentCreationJobSpec": {
+    "schemaFileName": "file:///opt/airflow/schemas/customer_dim_schema.json",
+    "tableConfigFileName": "file:///opt/airflow/tables/customer_dim_table.json",
+    "inputFormat": "csv"
+  },
+  "segmentTarPushJobSpec": {
+    "controllerURI": "http://pinot-controller:9000"
+  }
+}

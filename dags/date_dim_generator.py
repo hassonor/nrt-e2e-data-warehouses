@@ -9,8 +9,7 @@ from airflow.operators.python import PythonOperator
 start_date = datetime(2024, 12, 12)
 default_args = {
     'owner': 'orhasson',
-    'depends_on_past': False,
-    'backfill': False,
+    'depends_on_past': False
 }
 
 # Parameters
@@ -95,6 +94,7 @@ with DAG('date_dim_generator',
          description='Generate date dimension data in CSV file',
          schedule_interval=timedelta(days=1),
          start_date=start_date,
+         catchup=False,
          tags=['dimension']) as dag:
     # Task 1: Start
     start = EmptyOperator(

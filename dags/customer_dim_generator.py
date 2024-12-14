@@ -9,12 +9,11 @@ from airflow.operators.python import PythonOperator
 start_date = datetime(2024, 12, 12)
 default_args = {
     'owner': 'orhasson',
-    'depends_on_past': False,
-    'backfill': False,
+    'depends_on_past': False
 }
 
 # Parameters
-num_rows = 100  # Number of rows to generate
+num_rows = 1000  # Number of rows to generate
 output_file = './csvs/customer_dim_large_data.csv'
 
 
@@ -85,6 +84,7 @@ with DAG('customer_dim_generator',
          description='A DAG to generate large customer dimension data',
          schedule_interval=timedelta(days=1),
          start_date=start_date,
+         catchup=False,
          tags=['dimension']) as dag:
     start = EmptyOperator(
         task_id='start_task',
