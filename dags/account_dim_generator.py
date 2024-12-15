@@ -38,6 +38,7 @@ def generate_random_data(row_num):
             opening_dates_mills,
         )
     except Exception as e:
+
         print(f"Error generating random data for row {row_num}: {str(e)}")
         raise
 
