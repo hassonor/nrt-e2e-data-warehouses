@@ -22,7 +22,7 @@ repos:
         language_version: python3.12
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.8.2
+    rev: v0.8.3
     hooks:
       - id: ruff
         language_version: python3.12
