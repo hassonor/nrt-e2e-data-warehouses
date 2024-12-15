@@ -20,15 +20,9 @@ class PinotSchemaSubmitOperator(BaseOperator):
     - Raises AirflowException on invalid directory, invalid JSON, or non-200 responses.
     """
 
-    template_fields = ('folder_path', 'pinot_url')
+    template_fields = ("folder_path", "pinot_url")
 
-    def __init__(
-            self,
-            folder_path: str,
-            pinot_url: str,
-            *args,
-            **kwargs
-    ) -> None:
+    def __init__(self, folder_path: str, pinot_url: str, *args, **kwargs) -> None:
         """
         Initialize the PinotSchemaSubmitOperator.
 
@@ -58,29 +52,39 @@ class PinotSchemaSubmitOperator(BaseOperator):
                 f"The provided folder_path '{self.folder_path}' is not a directory or doesn't exist."
             )
 
-        schema_files = list(folder.glob('*.json'))
+        schema_files = list(folder.glob("*.json"))
         if not schema_files:
-            self.log.info("No schema files found in %s. Nothing to submit.", self.folder_path)
+            self.log.info(
+                "No schema files found in %s. Nothing to submit.", self.folder_path
+            )
             return "No schemas submitted."
 
-        self.log.info("Found %d schema file(s) in %s.", len(schema_files), self.folder_path)
-        headers = {'Content-Type': 'application/json'}
+        self.log.info(
+            "Found %d schema file(s) in %s.", len(schema_files), self.folder_path
+        )
+        headers = {"Content-Type": "application/json"}
 
         for schema_file in schema_files:
             self.log.info("Processing schema file: %s", schema_file)
             try:
                 # Read file and validate JSON
-                with schema_file.open('r', encoding='utf-8') as f:
+                with schema_file.open("r", encoding="utf-8") as f:
                     schema_data = f.read()
                     json.loads(schema_data)  # Validate JSON
 
                 # POST request to Pinot endpoint
-                response = requests.post(self.pinot_url, data=schema_data, headers=headers)
+                response = requests.post(
+                    self.pinot_url, data=schema_data, headers=headers
+                )
                 if response.status_code == 200:
                     self.log.info("Schema successfully submitted: %s", schema_file)
                 else:
-                    self.log.error("Failed to submit schema file %s: %d - %s",
-                                   schema_file, response.status_code, response.text)
+                    self.log.error(
+                        "Failed to submit schema file %s: %d - %s",
+                        schema_file,
+                        response.status_code,
+                        response.text,
+                    )
                     raise AirflowException(
                         f"Schema submission failed for {schema_file} with status code {response.status_code}"
                     )
@@ -89,7 +93,9 @@ class PinotSchemaSubmitOperator(BaseOperator):
                 self.log.error("Invalid JSON in %s: %s", schema_file, str(e))
                 raise AirflowException(f"Invalid JSON schema in {schema_file}: {e}")
             except Exception as e:
-                self.log.exception("An unexpected error occurred while submitting %s", schema_file)
+                self.log.exception(
+                    "An unexpected error occurred while submitting %s", schema_file
+                )
                 raise AirflowException(f"Error submitting schema {schema_file}: {e}")
 
         self.log.info("All schema files have been successfully submitted.")

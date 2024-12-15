@@ -24,22 +24,22 @@ class KafkaProduceOperator(BaseOperator):
     :param compression: Whether to enable gzip compression for the producer.
     """
 
-    template_fields = ('kafka_broker', 'kafka_topic', 'num_records')
+    template_fields = ("kafka_broker", "kafka_topic", "num_records")
 
     def __init__(
-            self,
-            kafka_broker: str,
-            kafka_topic: str,
-            num_records: int = 100,
-            compression: bool = True,
-            *args,
-            **kwargs
+        self,
+        kafka_broker: str,
+        kafka_topic: str,
+        num_records: int = 100,
+        compression: bool = True,
+        *args,
+        **kwargs,
     ) -> None:
         super().__init__(*args, **kwargs)
         self.kafka_broker = kafka_broker
         self.kafka_topic = kafka_topic
         self.num_records = num_records
-        self.compression_type = 'gzip' if compression else None
+        self.compression_type = "gzip" if compression else None
 
     def generate_transaction_data(self, row_num: int) -> Dict[str, Any]:
         """
@@ -59,11 +59,13 @@ class KafkaProduceOperator(BaseOperator):
         account_id = random.choice(account_id_list)
         branch_id = random.choice(branch_id_list)
 
-        transaction_types = ['Credit', 'Debit', 'Transfer', 'Withdrawal', 'Deposit']
-        currencies = ['USD', 'GBP', 'EUR', 'NIS']
+        transaction_types = ["Credit", "Debit", "Transfer", "Withdrawal", "Deposit"]
+        currencies = ["USD", "GBP", "EUR", "NIS"]
 
         transaction_id = f"T{row_num:06d}"
-        transaction_date = int((datetime.now() - timedelta(days=random.randint(0, 365))).timestamp() * 1000)
+        transaction_date = int(
+            (datetime.now() - timedelta(days=random.randint(0, 365))).timestamp() * 1000
+        )
         transaction_type = random.choice(transaction_types)
         currency = random.choice(currencies)
         transaction_amount = round(random.uniform(10.0, 10000.0), 2)
@@ -97,10 +99,10 @@ class KafkaProduceOperator(BaseOperator):
         """
         producer = KafkaProducer(
             bootstrap_servers=self.kafka_broker,
-            value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+            value_serializer=lambda v: json.dumps(v).encode("utf-8"),
             compression_type=self.compression_type,
             linger_ms=10,
-            batch_size=32768
+            batch_size=32768,
         )
 
         try:
@@ -112,14 +114,23 @@ class KafkaProduceOperator(BaseOperator):
                 try:
                     producer.send(self.kafka_topic, transaction)
                     # Log only the transaction_id at info level for cleaner daily logs.
-                    self.log.info("Sent transaction ID: %s", transaction["transaction_id"])
+                    self.log.info(
+                        "Sent transaction ID: %s", transaction["transaction_id"]
+                    )
                 except Exception as e:
-                    self.log.exception("Error sending transaction %s", transaction["transaction_id"])
-                    raise AirflowException(f"Error sending transaction {transaction['transaction_id']}") from e
+                    self.log.exception(
+                        "Error sending transaction %s", transaction["transaction_id"]
+                    )
+                    raise AirflowException(
+                        f"Error sending transaction {transaction['transaction_id']}"
+                    ) from e
         finally:
             producer.flush()
             producer.close()
 
-        self.log.info("%d transaction records have been sent to Kafka topic \"%s\".", self.num_records,
-                      self.kafka_topic)
+        self.log.info(
+            '%d transaction records have been sent to Kafka topic "%s".',
+            self.num_records,
+            self.kafka_topic,
+        )
         return f"Submitted {self.num_records} transaction(s) successfully."

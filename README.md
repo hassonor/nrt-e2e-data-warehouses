@@ -92,7 +92,7 @@ docker compose up --build -d
     - Choose a table and view its schema with `SEE TABLE SCHEMA`.
 2. Run the following query in SQL Lab:
    ```sql
-   SELECT 
+   SELECT
      tf.*,
      CONCAT(cd.first_name, ' ', cd.last_name) AS full_name,
      email,
@@ -106,7 +106,7 @@ docker compose up --build -d
      account_type,
      status,
      balance
-   FROM 
+   FROM
      transaction_facts tf
      LEFT JOIN account_dim ad ON tf.account_id = ad.account_id
      LEFT JOIN customer_dim cd ON tf.customer_id = cd.customer_id
